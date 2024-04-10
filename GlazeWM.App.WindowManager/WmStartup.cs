@@ -24,7 +24,6 @@ namespace GlazeWM.App.WindowManager
     private readonly KeybindingService _keybindingService;
     private readonly WindowService _windowService;
     private readonly WindowEventService _windowEventService;
-    private readonly WindowService _windowService;
     private readonly UserConfigService _userConfigService;
 
     private SystemTrayIcon? _systemTrayIcon { get; set; }
@@ -34,14 +33,12 @@ namespace GlazeWM.App.WindowManager
       KeybindingService keybindingService,
       WindowService windowService,
       WindowEventService windowEventService,
-      WindowService windowService,
       UserConfigService userConfigService)
     {
       _bus = bus;
       _keybindingService = keybindingService;
       _windowService = windowService;
       _windowEventService = windowEventService;
-      _windowService = windowService;
       _userConfigService = userConfigService;
     }
 
