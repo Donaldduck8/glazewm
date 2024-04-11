@@ -52,12 +52,12 @@ namespace GlazeWM.Domain.UserConfigs
         if (regex.IsMatch(commandString))
         {
           return regex.Replace(commandString, (Match match) =>
-            match.Value
+            match.Value.ToLowerInvariant()
           );
         }
       }
 
-      return commandString;
+      return commandString.ToLowerInvariant();
     }
 
     public void ValidateCommand(string commandString)
