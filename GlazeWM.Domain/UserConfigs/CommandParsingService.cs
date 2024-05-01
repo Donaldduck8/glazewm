@@ -236,9 +236,6 @@ namespace GlazeWM.Domain.UserConfigs
         "height" => subjectContainer is Window
           ? new SetWindowSizeCommand(subjectContainer as Window, ResizeDimension.Height, commandParts[2])
           : new NoopCommand(),
-        "no_title" => subjectContainer is Window
-          ? new RemoveTitleBarCommand(subjectContainer as Window)
-          : new NoopCommand(),
         _ => throw new ArgumentException(null, nameof(commandParts)),
       };
     }
